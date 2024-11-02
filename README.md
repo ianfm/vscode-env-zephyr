@@ -54,9 +54,13 @@ Linux/macOS:
 docker run --rm -it -p 8080:8080 -v "$(pwd)"/workspace:/workspace -w /workspace env-zephyr-espressif
 ```
 
-Windows:
+Windows (cmd):
 ```bat
 docker run --rm -it -p 8080:8080 -v "%cd%\workspace":/workspace -w /workspace env-zephyr-espressif
+```
+Windows (Powershell)
+```powershell
+docker run --rm -it -p 8080:8080 -v $pwd/workspace:/workspace -w /workspace env-zephyr-espressif
 ```
 
 Alternatively, you can run the image in interactive mode by adding the `--entrypoint /bin/bash` argument. This will allow you to skip running the VS Code server in the background.
